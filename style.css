@@ -9,7 +9,7 @@
     --color-blue-dark: #1E3A8A; 
     --color-red-dark: #7F1D1D;
 
-    /* PERUBAHAN DI SINI: Gradasi dibalik (Biru ke Merah) */
+    /* Gradasi dibalik (Biru ke Merah) */
     --color-gradient-red-blue: linear-gradient(to right, var(--color-blue-dark), var(--color-red-dark)); 
     
     /* AKSEN DISESUAIKAN DENGAN PALET POSTER */
@@ -86,6 +86,7 @@ body::before {
     -webkit-text-fill-color: transparent;
     background-clip: text;
     color: transparent;
+    /* Efek shadow/stroke dihapus */
 }
 
 .nav ul {
@@ -124,6 +125,9 @@ body::before {
     overflow: hidden;
     background: transparent; 
 }
+.light-bg {
+    background-color: rgba(0,0,0,0.1);
+}
 
 .section-padding::before, .section-padding::after {
     content: none !important; 
@@ -142,6 +146,7 @@ body::before {
     color: transparent;
     position: relative; 
     z-index: 2; 
+    /* Efek shadow/stroke dihapus */
 }
 
 .section-intro {
@@ -197,6 +202,7 @@ body::before {
     color: transparent;
     position: relative;
     z-index: 2;
+    /* Efek shadow/stroke dihapus */
 }
 
 /* --- Penyesuaian Style Setelah Penghapusan Logo Frame --- */
@@ -250,7 +256,7 @@ body::before {
     background-clip: text;
     color: transparent; 
 }
-.social-links-hero a .fa-youtube:hover { color: #FF0000; } /* Style hover YouTube */
+.social-links-hero a .fa-youtube:hover { color: #FF0000; }
 .social-links-hero a .fa-envelope:hover { color: #EA4335; }
 
 
@@ -421,7 +427,7 @@ body::before {
 }
 
 .skill-category {
-    min-height: 350px; 
+    min-height: 300px; 
     background-color: var(--color-primary-bg);
     padding: 30px;
     border-radius: 12px;
@@ -455,6 +461,7 @@ body::before {
     background-clip: text;
     color: transparent;
     font-size: 28px;
+    /* Efek shadow/stroke dihapus */
 }
 
 .skill-category ul {
@@ -514,6 +521,7 @@ body::before {
     text-align: left;
     position: relative;
     z-index: 2;
+    min-height: 350px;
 }
 
 .gallery-item:hover {
@@ -679,6 +687,7 @@ body::before {
     font-size: 30px;
     margin-bottom: 10px;
     display: block;
+    /* Efek shadow/stroke dihapus */
 }
 
 .footer-tagline {
@@ -743,6 +752,7 @@ body::before {
     font-size: 24px;
     margin-right: 15px;
     transition: filter 0.3s ease;
+    /* Efek shadow/stroke dihapus */
 }
 
 .social-icons a:hover {
@@ -797,6 +807,48 @@ body::before {
     animation: moveClouds 120s linear infinite reverse;
     opacity: 0.8;
     transform: translateX(0);
+}
+
+
+/* ---------------------------------------------------- */
+/* --- TAMBAHAN BARU: Animasi Scroll-on-View --- */
+/* ---------------------------------------------------- */
+
+/* 1. Definisikan animasi yang akan digunakan */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* 2. Sembunyikan elemen yang akan dianimasikan */
+.animate-on-scroll {
+    opacity: 0;
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+    /* Mulai dari bawah */
+    transform: translateY(30px); 
+}
+
+/* 3. Buat class 'is-visible' yang akan ditambahkan oleh JavaScript */
+.animate-on-scroll.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* 4. (Opsional) Terapkan delay berbeda untuk item yang berurutan */
+.timeline-item.animate-on-scroll:nth-child(even) {
+    transition-delay: 0.2s;
+}
+.skill-category.animate-on-scroll:nth-child(2) {
+    transition-delay: 0.2s;
+}
+.skill-category.animate-on-scroll:nth-child(3) {
+    transition-delay: 0.4s;
 }
 
 
