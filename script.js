@@ -6,44 +6,45 @@ document.addEventListener('DOMContentLoaded', () => {
     const carouselTrack = document.querySelector('.carousel-track');
     const prevBtn = document.querySelector('.prev-btn');
     const nextBtn = document.querySelector('.next-btn');
-    const galleryItems = Array.from(document.querySelectorAll('.gallery-item'));
+    // Ambil SEMUA gallery-item di halaman
+    const allGalleryItems = Array.from(document.querySelectorAll('.gallery-item'));
+    // Filter HANYA item yang ada di dalam .carousel-track
+    const carouselItems = allGalleryItems.filter(item => item.closest('.carousel-track'));
 
     let itemWidth = 0;
     let currentPosition = 0;
 
     // Fungsi untuk menghitung lebar item secara akurat
     const calculateItemWidth = () => {
-        if (galleryItems.length > 0) {
-            // Lebar satu item (termasuk padding/border)
-            // offsetWidth adalah perhitungan yang paling aman
-            itemWidth = galleryItems[0].offsetWidth;
+        if (carouselItems.length > 0) {
+            itemWidth = carouselItems[0].offsetWidth; 
             return itemWidth;
         }
         return 0;
     };
-
+    
     // Fungsi untuk menggeser track
     const moveToSlide = (track, targetPosition) => {
-        track.style.transform = `translateX(-${targetPosition}px)`;
-        currentPosition = targetPosition;
+        if (track) { // Pastikan track ada
+            track.style.transform = `translateX(-${targetPosition}px)`;
+            currentPosition = targetPosition;
+        }
     };
 
     // Kunci: Menghitung max scroll yang benar untuk looping
     const getMaxScroll = () => {
+        if (!carouselTrack) return 0; 
         const wrapperWidth = document.querySelector('.carousel-wrapper').offsetWidth;
-        // Total lebar track dikurangi lebar wrapper
         let maxScroll = carouselTrack.scrollWidth - wrapperWidth;
-        
-        // Menyesuaikan jika ada sisa padding (CSS padding: 15px)
-        // Jika box-sizing benar, maxScroll sudah cukup.
         return maxScroll > 0 ? maxScroll : 0; 
     };
 
     // --- Setup Inti Carousel ---
     const setupCarousel = () => {
+        if (!carouselTrack) return; // Jangan jalankan jika carousel tidak ada
+        
         const width = calculateItemWidth();
         if (width === 0) {
-             // Jika lebar masih nol, coba lagi (solusi timing)
              setTimeout(setupCarousel, 100);
              return; 
         }
@@ -52,10 +53,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // Event Listener Tombol Next (Loop ke awal)
         nextBtn.onclick = () => {
-            // Geser 1 item
             let targetPosition = currentPosition + width; 
-            
-            // Jika melebihi batas, kembali ke awal (0)
             if (targetPosition > maxScroll) { 
                 targetPosition = 0; 
             }
@@ -64,10 +62,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // Event Listener Tombol Previous (Loop ke akhir)
         prevBtn.onclick = () => {
-            // Geser 1 item
             let targetPosition = currentPosition - width; 
-            
-            // Jika kurang dari nol, pindah ke posisi looping terakhir
             if (targetPosition < 0) {
                 targetPosition = maxScroll;
             }
@@ -95,7 +90,8 @@ document.addEventListener('DOMContentLoaded', () => {
     lightbox.style.display = 'none'; 
     document.body.appendChild(lightbox);
 
-    galleryItems.forEach(item => {
+    // Terapkan Lightbox ke SEMUA gallery-item
+    allGalleryItems.forEach(item => {
         item.addEventListener('click', () => {
             const largeImgSrc = item.getAttribute('data-large-img');
             
@@ -117,4 +113,26 @@ document.addEventListener('DOMContentLoaded', () => {
             lightbox.style.display = 'none';
         }
     });
+
+    // ==========================================================
+    // 3. TAMBAHAN BARU: Animasi Scroll-on-View
+    // ==========================================================
+    const animatedElements = document.querySelectorAll('.animate-on-scroll');
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('is-visible');
+                observer.unobserve(entry.target); // Hentikan pengamatan setelah animasi berjalan
+            }
+        });
+    }, {
+        threshold: 0.1 // Animasi terpicu saat 10% elemen terlihat
+    });
+
+    // Amati setiap elemen yang perlu dianimasikan
+    animatedElements.forEach(el => {
+        observer.observe(el);
+    });
+
 });
