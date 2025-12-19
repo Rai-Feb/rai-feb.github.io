@@ -1,4 +1,3 @@
-
 :root {
     /* Background Base Darker */
     --bg-main: #02040a; 
@@ -34,7 +33,7 @@ body {
     overflow-x: hidden;
     position: relative;
     
-    /* Highlight blue-red*/
+    /* BACKGROUND GRADASI 2 WARNA (BIRU & MERAH SOFT) */
     background-image: 
         radial-gradient(circle at 20% 20%, rgba(59, 130, 246, 0.15) 0%, transparent 50%), /* Biru Kiri Atas */
         radial-gradient(circle at 80% 80%, rgba(239, 68, 68, 0.12) 0%, transparent 50%); /* Merah Kanan Bawah (Soft) */
