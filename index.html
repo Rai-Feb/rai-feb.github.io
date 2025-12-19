@@ -4,277 +4,173 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Raihan Febriahdi</title>
+    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css"> 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header class="header">
-        <div class="container">
+
+    <div class="wind-container">
+        <div class="wind-layer layer-1"></div>
+        <div class="wind-layer layer-2"></div>
+    </div>
+
+    <header>
+        <div class="container header-container">
             <div class="logo">
-                <span class="logo-text">Raihan</span>
+                <span class="logo-text">Raihan Febriahdi</span>
             </div>
             <nav class="nav">
                 <ul>
-                    <li><a href="#about-me">About Me</a></li>
-                    <li><a href="#skills">Skills</a></li>
-                    <li><a href="#experience">Experiences</a></li>
-                    <li><a href="#documentation">Documentations</a></li>
+                    <li><a href="#about-me">About</a></li>
+                    <li><a href="#experience">Experience</a></li>
+                    <li><a href="#documentation">Gallery</a></li>
                 </ul>
             </nav>
+            <div class="mobile-menu-icon">
+                <i class="fas fa-bars"></i>
+            </div>
         </div>
     </header>
 
-    <main class="main-content">
-        
-        <div id="moving-clouds"></div>
-
+    <main>
         <section id="about-me" class="hero-section">
             <div class="container">
-                <div class="profile-intro">
-                    <img src="Raihan-Profile.jpg" alt="Raihan Profile Picture" class="profile-picture"> 
-                    <h1>Hello World, I am Raihan Febriahdi!</h1>
-                    <p class="section-intro"> #Meaningful For Impact</p>
-                </div>
+                <div class="hero-content">
+                    <div class="hero-text animate-on-scroll">
+                        
+                        <h1 class="greeting">Hello World, I am <br> <span class="gradient-text">Raihan Febriahdi</span></h1>
+                        
+                        <div class="tagline-wrapper">
+                            <span class="impact-tag">#MeaningfulForImpact</span>
+                        </div>
 
-                <div class="description-and-socials">
-                    <h2 class="logo-philosophy-heading">RFL | Enthusiast</h2>
-                    <div class="logo-description" style="max-width: 900px; margin: 0 auto 40px;">
-                        <p>Computer Science, Singaperbangsa of University 2024</p>
-                    </div>
-                    
-                    <div class="social-links-hero">
-                        <a href="https://www.linkedin.com/in/raihan-febriahdi-52a385395" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
-                        <a href="https://github.com/Rai-Feb" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
-                        <a href="https://instagram.com/_raifeb" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                        <a href="https://youtube.com/@raihanfebriahdi?si=X1KzNxJjpt5CG4G6" target="_blank" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
-                        <a href="mailto:raihanfebriahdi@email.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
-                    </div>
-                </div>
-            </div>
-        </section>
-        
-        <section id="skills" class="section-padding light-bg">
-            <div class="container">
-                <h2>Skills</h2>
-                <div class="skills-grid"> 
-                    
-                    <div class="skill-category card animate-on-scroll">
-                        <h3><i class="fas fa-code"></i> Programming</h3>
-                        <ul>
-                            <li>Python (Advanced)</li>
-                            <li>C++ (Advanced)</li>
-                            <li>Java (Intermediate)</li>
-                            <li>Git & GitHub</li>
-                        </ul>
-                    </div>
-                    
-                    <div class="skill-category card animate-on-scroll">
-                        <h3><i class="fas fa-users-cog"></i> Soft Skills</h3>
-                        <ul>
-                            <li>Adaptive</li>
-                            <li>Problem Solver</li>
-                            <li>Team-Work</li>
-                        </ul>
-                    </div>
-                    
-                    <div class="skill-category card animate-on-scroll">
-                        <h3><i class="fas fa-toolbox"></i> Other Skills</h3>
-                        <ul>
-                            <li>Figma, Canva & Photoshop</li>
-                            <li>After Effects, Capcut & Kinemaster</li>
-                            <li>Chess</li>
-                        </ul>
-                    </div>
-        
-                </div>
-            </div>
-        </section>
-
-        <section id="experience" class="section-padding">
-            <div class="container">
-                <h2>Experiences</h2>
-                <div class="timeline">
-                    <div class="timeline-item animate-on-scroll">
-                        <div class="timeline-marker"></div>
-                        <div class="timeline-content card">
-                            <h3>Coming-Soon</h3>
-                            <h4>?</h4>
-                            <p class="date">?</p>
-                            <ul>
-                                <li></li>
-                            </ul>
+                        <h2 class="sub-heading">Reinforcement Learning</h2>
+                        
+                        <div class="description-text">
+                            <p>Computer Science | Informatics, Singaperbangsa of University 2024</p>
+                        </div>
+                        
+                        <div class="social-links-hero">
+                            <a href="https://www.linkedin.com/in/raihan-febriahdi-52a385395" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="https://github.com/Rai-Feb" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                            <a href="https://instagram.com/_raifeb" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                            <a href="https://youtube.com/@raihanfebriahdi?si=X1KzNxJjpt5CG4G6" target="_blank" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                            <a href="mailto:raihanfebriahdi@email.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
                         </div>
                     </div>
-                    <div class="timeline-item animate-on-scroll">
-                        <div class="timeline-marker"></div>
-                        <div class="timeline-content card">
+                    
+                    <div class="profile-container animate-on-scroll delay-100">
+                        <div class="profile-box">
+                            <img src="PPweb.jpeg" alt="Raihan Profile Picture" class="profile-picture">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section id="experience">
+            <div class="container">
+                <h2 class="section-title animate-on-scroll">Experiences</h2>
+                
+                <div class="timeline-minimal">
+                    
+                    <div class="timeline-row animate-on-scroll">
+                        <div class="timeline-time">
+                            <span>External<span>
+                        </div>
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-data">
+                            <h3>Coming Soon</h3>
+                            <span class="place">?</span>
+                            <p>.</p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-row animate-on-scroll">
+                        <div class="timeline-time">
+                            <span>Organization</span>
+                        </div>
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-data">
                             <h3>Student Organization</h3>
-                            <h4>Informatics Student Association</h4>
-                            <p class="date">January 2025 - November 2025</p>
-                            <ul>
-                                <li>Information and Communication Division</li>
-                                <li>Head of Media Information Department</li>
-                                <li>Organizing Committee for SEMANTIK 9.0, IT Week 2025, LKMMPD 2025, IT Bootcamp 2025 and Member Deliberation 2025.</li>
+                            <span class="place">HIMTIKA 2024 - 2025 | Demissioner.</span>
+                            <ul class="role-list">
+                                <li>Information and Communication Division - Media Information.</li>
+                            
+                            <span class="place">Organization Commitee:</span>
+                            <ul class="role-list">
+                                <li>SEMANTIK 9.0, Pekan IT 2025, LKMMPD 2025, IT Bootcamp 2025, Member Deliberation 2025 and Pemira Faculty of Computer Science 2025.</li>
                             </ul>
                         </div>
                     </div>
-                    <div class="timeline-item animate-on-scroll">
-                        <div class="timeline-marker"></div>
-                        <div class="timeline-content card">
+
+                    <div class="timeline-row animate-on-scroll">
+                        <div class="timeline-time">
+                            <span>State</span>
+                        </div>
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-data">
                             <h3>Informatics Student</h3>
-                            <h4>Singaperbangsa of University</h4>
-                            <p class="date">July 2024 - Present</p>
-                            <ul>
-                                <li>ULCC (Fss English, Public Speaking Class)</li>
-                            <p class="date">September 2024 - Present</p>
-                                <li>HIMTIKA (Student Executive)</li>
-                            <p class="date">January 2025 - Present</p>
+                            <span class="place">Singaperbangsa of University 2024 - Present.</span>
+                            <ul class="role-list">
+                                <li>UNSIKA Languanges & Cultures Club | September 2024 - Present.</li>
+                                <li>Himpunan Mahasiswa Informatika UNSIKA | 2024 - 2025.</li>
                             </ul>
                         </div>
                     </div>
+
                 </div>
             </div>
         </section>
         
-        <section id="documentation" class="section-padding light-bg">
+        <section id="documentation">
             <div class="container">
-                <h2>Documentation</h2>
-                <p class="section-intro">2024 - Present</p>
+                <h2 class="section-title animate-on-scroll">Gallery & Archive</h2>
+                <p class="center-text animate-on-scroll" style="color:var(--text-muted); margin-bottom: 30px;">
+                .
+                </p>
 
-                <div class="carousel-wrapper animate-on-scroll">
-                    <div class="carousel-track">
-                        
-                        <div class="gallery-item card" data-large-img="Sertifikat UFO 2024.jpg">
-                            <img src="Sertifikat UFO 2024.jpg" alt="ULCC FSS English">
-                            <div class="gallery-info">
-                                <h3>ULCC Freshman Orientation - FSS English</h3>
-                                <p>Student Activity Unit.</p>
+                <div class="drive-container animate-on-scroll">
+                    <div class="drive-card glass-card">
+                        <div class="drive-content">
+                            <div class="drive-icon">
+                                <i class="fab fa-google-drive"></i>
+                            </div>
+                            <div class="drive-info">
+                                <h3>Coming Soon.</h3>
+                                <p>.</p>
                             </div>
                         </div>
-                        
-                        <div class="gallery-item card" data-large-img="Sertifikat PSC 2024.jpg">
-                            <img src="Sertifikat PSC 2024.jpg" alt="ULCC Public Speaking">
-                            <div class="gallery-info">
-                                <h3>ULCC - Public Speaking Class</h3>
-                                <p></p>
-                            </div>
-                        </div>
-                        
-                        <div class="gallery-item card" data-large-img="HIMTIKA-Sinergis.jpg">
-                            <img src="HIMTIKA-Sinergis.jpg" alt="HIMTIKA Sinergis">
-                            <div class="gallery-info">
-                                <h3>HIMTIKA 2025 - Kabinet Sinergis</h3>
-                                <p></p>
-                            </div>
-                        </div>
-                        
-                        <div class="gallery-item card" data-large-img="Divisi-Infokom.jpg">
-                            <img src="Divisi-Infokom.jpg" alt="Divisi Infokom">
-                            <div class="gallery-info">
-                                <h3>Information and Communication Division</h3>
-                                <p></p>
-                            </div>
-                        </div>
-                        
-                        <div class="gallery-item card" data-large-img="Dept-Infokom.jpg">
-                            <img src="Dept-Infokom.jpg" alt="Departemen Media Information">
-                            <div class="gallery-info">
-                                <h3>Head of Media Information Departmen</h3>
-                                <p></p>
-                            </div>
-                        </div>
-                        
-                        <div class="gallery-item card" data-large-img="Sertfikat Panitia - SEMANTIK 9.0.jpg">
-                            <img src="Sertfikat Panitia - SEMANTIK 9.0.jpg" alt="Panitia SEMANTIK">
-                            <div class="gallery-info">
-                                <h3>Organizing Committee for SEMANTIK 9.0</h3>
-                                <p></p>
-                            </div>
-                        </div>
-                        
-                        <div class="gallery-item card" data-large-img="Sertifikat Panitia - Pekan IT 2025.jpg">
-                            <img src="Sertifikat Panitia - Pekan IT 2025.jpg" alt="Panitia Pekan IT">
-                            <div class="gallery-info">
-                                <h3>Organizing Committee for Pekan IT 2025</h3>
-                                <p></p>
-                            </div>
-                        </div>
-                        
-                        <div class="gallery-item card" data-large-img="Sertifikat Panitia - LKMMPD 2025.jpg">
-                            <img src="Sertifikat Panitia - LKMMPD 2025.jpg" alt="Panitia LKMMPD">
-                            <div class="gallery-info">
-                                <h3>Organizing Committee for LKMMPD 2025</h3>
-                                <p></p>
-                            </div>
-                        </div>
-                        
-                        <div class="gallery-item card" data-large-img="https://via.placeholder.com/800x600/1E3A8A/FFFFFF?text=Project+9">
-                            <img src="https://via.placeholder.com/400x300/1E3A8A/FFFFFF?text=Panitia+IT+Bootcamp" alt="Panitia IT Bootcamp">
-                            <div class="gallery-info">
-                                <h3>Organizing Committee for IT Bootcamp</h3>
-                                <p></p>
-                            </div>
-                        </div>
-                        
-                        <div class="gallery-item card" data-large-img="Sertifikat GCP 2025.jpg">
-                            <img src="https://via.placeholder.com/400x300/7F1D1D/FFFFFF?text=Coming+Soon" alt="Coming Soon">
-                            <div class="gallery-info">
-                                <h3>Google Cloud Computing</h3>
-                                <p></p>
-                            </div>
-                        </div>
-                        
+                        <a href="https://" target="_blank" class="btn-drive">
+                            Open Drive <i class="fas fa-arrow-right"></i>
+                        </a>
                     </div>
-
-                    <button class="carousel-btn prev-btn"><i class="fas fa-chevron-left"></i></button>
-                    <button class="carousel-btn next-btn"><i class="fas fa-chevron-right"></i></button>
                 </div>
-
             </div>
         </section>
+
     </main>
 
     <footer class="footer">
         <div class="container">
             <div class="footer-content">
-                <div class="footer-col">
-                    <span class="logo-text">Raihan</span>
-                    <p class="footer-tagline">#Meaningful For Impact</p>
+                <div class="footer-left">
+                    <span class="logo-text">Raihan Febriahdi</span>
+                    <p>#Meaningful For Impact</p>
                 </div>
-                <div class="footer-col">
-                    <h4>Navigation</h4>
-                    <ul>
-                        <li><a href="#about-me">About Me</a></li>
-                        <li><a href="#skills">Skills</a></li>
-                        <li><a href="#experience">Experiences</a></li>
-                        <li><a href="#documentation">Documentations</a></li>
-                    </ul>
+                <div class="footer-right">
+                    <p class="copyright">&copy; 2025 Raihan. All Rights Reserved.</p>
                 </div>
-                <div class="footer-col">
-                    <h4>Contact Me</h4>
-                    <p><i class="fas fa-envelope"></i> raihanfebriahdi@gmail.com</p>
-                    <p><i class="fas fa-phone"></i> +6283870294919</p>
-                    <div class="social-icons">
-                        <a href="https://www.linkedin.com/in/raihan-febriahdi-52a385395" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
-                        <a href="https://github.com/Rai-Feb" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
-                        <a href="https://instagram.com/_raifeb" target="_blank" aria-label="Instagram"><i class="fab fa-instagram-square"></i></a>
-                    </div>
-                </div>
-            </div>
-            <div class="copyright">
-                <p>&copy; 2025 Raihan. All Rights Reserved.</p>
             </div>
         </div>
     </footer>
     
-    <script src="script.js"></script> 
+    <script src="script.js"></script>
 </body>
 </html>
-
-
-
-
-
